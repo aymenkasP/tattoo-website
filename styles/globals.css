@@ -1,9 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Poppins', sans-serif , -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background : #191919;
+    
+
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #eec063a6;
+  outline: 1px solid transparent;
+  border-radius:2px;
 }
 
 a {
