@@ -17,7 +17,7 @@ export default function Gallery({item}) {
                   <Image src={work.work.url}  
                                  width={600} 
                                 height={450} 
-                                priority = "false"
+                                priority = "true"
                                 loading="eager"
                                 layout='responsive'
                                 alt=''

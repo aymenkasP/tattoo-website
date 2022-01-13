@@ -8,16 +8,16 @@ import facebook from "../../styles/facebook.svg"
 import instagram from "../../styles/instagram.svg"
 import Contact from '../../Components/Contact'
 
-export default function index({data , artistWork}) {
+export default function index({artistWork,artistName,artistImage,aboutTheArtist , phoneNumber ,address ,email}) {
+    
+    
 
-    const {artistName,artistImage,aboutTheArtist , phoneNumber ,address ,email} = data[0] 
-    const paragraph = documentToHtmlString(aboutTheArtist.json) ?? <p>Null</p>
-    console.log(phoneNumber)
+
     return (
         <TheSection  >
             <div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" >
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" >
 
             <HeaderContainer>
                     <ImageContainer>
@@ -33,7 +33,7 @@ export default function index({data , artistWork}) {
                     </ImageContainer>
                 <ArtistAboutContainer>
                     <h2>{artistName}</h2>
-                    <div>{parse(paragraph)}</div>
+                    <div>{parse(documentToHtmlString(aboutTheArtist?.json))}</div>
                     <div>
                             <div>
                                 <p><span>Address :</span> {address}</p>   
@@ -79,7 +79,6 @@ export default function index({data , artistWork}) {
                             src={item.work.url}  
                             width={600} 
                             height={600} 
-                            priority = "false"
                             loading="eager"
                             layout='responsive'
                             alt=""
@@ -102,8 +101,9 @@ export async function getStaticProps({ params}) {
     const artistWork = await ArtistWork(params.slug)
         return {
         props: {
-            data ,
-            artistWork
+                ...data[0] ?? null
+           ,
+            artistWork 
         },
         }
   }
@@ -115,7 +115,7 @@ export async function getStaticPaths() {
    
       return {
         paths: artist?.map((TheArtist) => `/artist/${TheArtist.artistName}`) ?? [],
-        fallback: true,
+        fallback: false,
       }
   }
 
