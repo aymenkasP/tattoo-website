@@ -55,7 +55,7 @@ return {
 
   },
   
-    revalidate: 10
+    revalidate: 1
   
 }
 }
