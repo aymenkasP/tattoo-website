@@ -42,7 +42,7 @@ export default function Home({HeroData, AboutData ,ArtistsData , GalleryData }) 
 
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const HeroData = (await getHeroes()) ?? []
   const AboutData = (await getAbout()) ?? []
   const ArtistsData = (await getArtists()) ?? []
@@ -55,7 +55,7 @@ return {
 
   },
   
-    revalidate: 1
+    
   
 }
 }
