@@ -53,6 +53,9 @@ return {
   props: {
     HeroData, AboutData ,ArtistsData , GalleryData 
 
-  }
+  },
+  
+    revalidate: 10
+  
 }
 }
