@@ -4,6 +4,42 @@ import styled from 'styled-components'
 import Button from './Button'
 import SideBarComponent from './SideBar';
 
+
+
+const NavBarMobile = styled.div`
+    display: none;
+    position: fixed;
+    width: 100%;
+    background : #000000;
+    bottom: 0;
+    padding: 0.4rem;
+    background-color: white;
+    z-index: 9999;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+  
+             background: #1a1a1a;
+box-shadow:  5px 5px 0px #0d0d0d,
+             -5px -5px 0px #272727;
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: 80px;
+        border-radius:1rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    @media (max-width: 719px) {
+        display :flex ;
+        align-items: center;
+        justify-content: space-around;
+  }
+`
+
+
 const NavBar = styled.nav`
     display: flex;
     position: sticky;
@@ -43,7 +79,6 @@ const LinksContainer = styled.nav`
 `
 const NavBtn = styled.nav`
 
-
     @media (max-width: 727px) {
         display: none;
         
@@ -59,40 +94,6 @@ display: none;
   }
     
 `
-
-const NavBarMobile = styled.div`
-    display: none;
-    position: fixed;
-    width: 100%;
-    background : #000000;
-    bottom: 0;
-    padding: 0.4rem;
-    background-color: white;
-    z-index: 9999;
-    justify-content: space-around;
-    align-items: center;
-    color: black;
-  
-             background: #1a1a1a;
-box-shadow:  5px 5px 0px #0d0d0d,
-             -5px -5px 0px #272727;
-    a {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        min-width: 80px;
-        border-radius:1rem;
-        font-weight: 400;
-        color: white;
-    }
-
-    @media (max-width: 719px) {
-        display :flex ;
-        align-items: center;
-        justify-content: space-around;
-  }
-`
-
 
 
 
