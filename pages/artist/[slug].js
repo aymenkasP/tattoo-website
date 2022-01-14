@@ -138,9 +138,7 @@ export async function getStaticPaths() {
         flex-wrap: wrap;
         background-color:white;
         margin-top: 5rem;
-
         border-radius:0.5rem;
-
         gap: 2rem;
         h2 {
         color: #EEBF63;
