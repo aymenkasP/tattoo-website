@@ -17,11 +17,11 @@ const Container = styled.main`
 export default function Layout({children}) {
     return (
         <>
-            <Container>
              <Nav />
+            <Container>
                  {children}
-             <Footer />
             </Container>
+             <Footer />
         </>
     )
 }
