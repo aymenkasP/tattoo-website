@@ -11,18 +11,22 @@ export default function Gallery({item}) {
             {
                 item.map(work => {
                 
-                return <div data-aos="zoom-out-up" key={work.work.url} >
+                return <div data-aos="zoom-out-up" key={work?.work?.url} >
 
-                 <GalleryCard >
-                  <Image src={work.work.url}  
-                                 width={600} 
-                                height={450} 
-                                priority = "true"
-                                loading="eager"
-                                layout='responsive'
-                                alt=''
-                    /> 
+                 {
+                     work?.work?.url && (
+                        <GalleryCard >
+                        <Image src={work.work.url}  
+                                        width={600} 
+                                        height={450} 
+                                        priority = "true"
+                                        loading="eager"
+                                        layout='responsive'
+                                        alt=''
+                            /> 
                 </GalleryCard>
+                     )
+                 }
                 </div>
 
                  } )

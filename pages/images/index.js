@@ -13,9 +13,10 @@ export default function image({gallery}) {
 
             {
               gallery.map(item => {
-              return <ImageCard  key={item.work.fileName}  >
-                          <Image src={item.work.url} 
-                       
+              return  item?.work?.url && <ImageCard  key={item?.work?.fileName}  >
+                            {
+                              item?.work?.url && (
+                                <Image src={item?.work?.url} 
                                         width={600} 
                                         height={450} 
                                         priority = "false"
@@ -23,6 +24,8 @@ export default function image({gallery}) {
                                         layout='responsive'
                                         alt=""
                                     /> 
+                              )
+                            }
                             <h3><span>by </span> 
                             <Link href={`/artist/${item?.artist?.artistName}`}>
                                 <a>{item?.artist?.artistName} </a>
