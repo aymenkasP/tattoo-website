@@ -11,10 +11,8 @@ export default function Gallery({item}) {
             {
                 item.map(work => {
                 
-                return <div data-aos="zoom-out-up" key={work?.work?.url} >
-
-                 {
-                     work?.work?.url && (
+                return work?.work?.url &&  <div data-aos="zoom-out-up" key={work?.work?.url} >
+                     
                         <GalleryCard >
                         <Image src={work.work.url}  
                                         width={600} 
@@ -25,8 +23,7 @@ export default function Gallery({item}) {
                                         alt=''
                             /> 
                 </GalleryCard>
-                     )
-                 }
+    
                 </div>
 
                  } )
