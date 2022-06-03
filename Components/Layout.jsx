@@ -13,10 +13,25 @@ const Container = styled.main`
   }
 
 `
+const Note = styled.p`
+    background-color:whitesmoke !important;
+  color: black !important;
+  text-align: center;
+  padding:1rem;
+  margin:0;
+  
+  a{
+    color: blue;
+}
+
+`
 
 export default function Layout({children}) {
     return (
         <>
+        <Note >this website is developed by <a target="_blank"
+      rel="noopener noreferrer"
+      passHref href="http://aymenchenomi.tk/" >aymen chenomi</a>  </Note>
              <Nav />
             <Container>
                  {children}
